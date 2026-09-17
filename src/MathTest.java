@@ -42,6 +42,7 @@ public class MathTest {
             double equation1 = (1/Math.pow(base, exponent));
             exponent *=-1;
             double equation2 = Math.pow(base, exponent);
+            assertEquals(equation1, equation2, "Reciprocal is working");
         }
 
 
@@ -67,6 +68,7 @@ public class MathTest {
             double equation1 = (equation1_1 * equation1_2);
             double dbExponent = (a+b);
             double equation2 = Math.pow(base,dbExponent);
+            assertEquals(equation1, equation2, "Multiplying is working");
         }
 
 
@@ -92,6 +94,7 @@ public class MathTest {
             double equation1 = (equation1_1 / equation1_2);
             double dbExponent = (a-b);
             double equation2 = Math.pow(base,dbExponent);
+            assertEquals(equation1, equation2, "Dividing is Working");
         }
 
 
@@ -116,6 +119,7 @@ public class MathTest {
             equation1 = Math.pow(equation1,b);
             double dbExponent = a * b;
             double equation2 = Math.pow(base,dbExponent);
+            assertEquals(equation1, equation2, "NestedPowers is Working");
         }
 
 
@@ -124,6 +128,8 @@ public class MathTest {
         public void testZeroPower(double base) {
             //x0 = 1
             double equation1 = Math.pow(base, 0);
+            assertEquals(equation1, 1);
+            assertEquals(equation1, base, "Zero power is working");
 
         }
 
@@ -133,7 +139,8 @@ public class MathTest {
         public void testOnePower(double base) {
             //x1 = x
             double equation1 = Math.pow(base, 1);
-
+            assertEquals(equation1, base);
+            assertEquals(equation1, base, "OnePower is Working");
         }
 
 
