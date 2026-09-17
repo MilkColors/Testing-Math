@@ -61,7 +61,12 @@ public class MathTest {
                 "-7.4, -8.3, -9.2"
         })
         public void testMultiplying(double base, double a, double b) {
-            
+            //x^a * x^b = x^a+b
+            double equation1_1 = Math.pow(base,a);
+            double equation1_2 = Math.pow(base,b);
+            double equation1 = (equation1_1 * equation1_2);
+            double dbExponent = (a+b);
+            double equation2 = Math.pow(base,dbExponent);
         }
 
 
