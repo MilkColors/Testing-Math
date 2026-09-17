@@ -1,0 +1,7 @@
+import org.junit.jupiter.api.Test;
+
+public class MathTest {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
