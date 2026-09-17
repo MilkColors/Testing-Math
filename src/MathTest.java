@@ -106,7 +106,11 @@ public class MathTest {
                 "-7.4, -8.3, -9.2"
         })
         public void testNestedPowers(double base, double a, double b) {
-
+            //(x^a)^b = x^a*b
+            double equation1 = Math.pow(base,a);
+            equation1 = Math.pow(equation1,b);
+            double dbExponent = a * b;
+            double equation2 = Math.pow(base,dbExponent);
         }
 
 
